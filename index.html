@@ -1,56 +1,32 @@
-<!DOCTYPE html><html lang="en">
+To center text in the middle of the page (both vertically and horizontally), you can use CSS Flexbox. Here's how to do it:
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centered Text</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #ffe6e6;
-    }.heart {
-  width: 100px;
-  height: 90px;
-  position: relative;
-  transform: scale(2);
-}
+      background-color: #FF8DA1;
+      font-family: sans-serif;
+    }
 
-.heart::before,
-.heart::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 90px;
-  background: red;
-  border-radius: 50px 50px 0 0;
-  top: 0;
-}
-
-.heart::before {
-  left: 50px;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-}
-
-.heart::after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
-}
-
-@media (max-width: 600px) {
-  .heart {
-    transform: scale(1.2);
-  }
-}
-
+    h1 {
+      font-size: 2rem;
+      color: #ffffff;
+    }
   </style>
 </head>
 <body>
-  <div class="heart"></div>
+  <h1>Fuck you</h1>
 </body>
 </html>
+
