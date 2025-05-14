@@ -15,28 +15,33 @@
     }
     .heart {
       position: relative;
-      width: 200px;
-      height: 180px;
+      width: 20vw;
+      height: 18vw;
+      min-width: 100px;
+      min-height: 90px;
+      max-width: 300px;
+      max-height: 270px;
+      transform: rotate(-45deg);
     }
     .heart::before,
     .heart::after {
       content: "";
       position: absolute;
-      width: 100px;
-      height: 160px;
+      width: 10vw;
+      height: 16vw;
       background: red;
-      border-radius: 100px 100px 0 0;
-      top: 0;
+      border-radius: 50% 50% 0 0;
+      min-width: 50px;
+      min-height: 80px;
+      max-width: 150px;
+      max-height: 240px;
     }
     .heart::before {
-      left: 100px;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
+      left: 10vw;
     }
     .heart::after {
+      top: 0;
       left: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
     }
   </style>
 </head>
@@ -44,6 +49,3 @@
   <div class="heart"></div>
 </body>
 </html>
-
-Save this code into a file with a .html extension (like big-heart.html) and open it in your browser to see a large red heart on a soft pink background. Let me know if you want text or animation added!
-
