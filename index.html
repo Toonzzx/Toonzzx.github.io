@@ -1,59 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <style>
     body {
       margin: 0;
-      background-color: #fff0f5;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-    }
-    .heart {
-      position: relative;
-      width: 10em;
-      height: 9em;
-      transform: rotate(-45deg);
-    }
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 10em;
-      height: 10em;
-      background: red;
-      border-radius: 50%;
-    }
-    .heart::before {
-      top: -5em;
-      left: 0;
-    }
-    .heart::after {
-      left: 5em;
-      top: 0;
-    }
+      background-color: #ffe6e6;
+    }.heart {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  transform: scale(2);
+}
 
-    @media (max-width: 600px) {
-      .heart {
-        width: 6em;
-        height: 5.4em;
-      }
-      .heart::before,
-      .heart::after {
-        width: 6em;
-        height: 6em;
-      }
-      .heart::before {
-        top: -3em;
-      }
-      .heart::after {
-        left: 3em;
-      }
-    }
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  top: 0;
+}
+
+.heart::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@media (max-width: 600px) {
+  .heart {
+    transform: scale(1.2);
+  }
+}
+
   </style>
 </head>
 <body>
