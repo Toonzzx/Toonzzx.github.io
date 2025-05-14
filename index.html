@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .heart {
+      position: relative;
+      width: 200px;
+      height: 180px;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 160px;
+      background: red;
+      border-radius: 100px 100px 0 0;
+      top: 0;
+    }
+    .heart::before {
+      left: 100px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+    .heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello world</h1>
+  <div class="heart"></div>
 </body>
 </html>
+
+Save this code into a file with a .html extension (like big-heart.html) and open it in your browser to see a large red heart on a soft pink background. Let me know if you want text or animation added!
+
